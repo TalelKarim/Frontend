@@ -6,6 +6,8 @@ import { AppService } from '../app.service';
 import { ToastrService } from 'ngx-toastr';
 import { MyserviceService } from '../myservice.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { cards } from '../interfaces/cards';
+
 @Component({
   selector: 'app-pc',
   templateUrl: './pc.component.html',
@@ -13,7 +15,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class PCComponent{
   /** Based on the screen size, switch from standard to one column per row */
-  cards = [];
+  cards: Array <cards> =[] ;
   cardsForHandset = [];
   cardsForWeb = [];
   add: number = -1 ;
@@ -74,7 +76,7 @@ export class PCComponent{
  
   }
 
-  buy(amount: number){
+  buy(amount: string){
      let selectedCard = this.cards[this.add] ;
      let data = {
        ref: selectedCard.ref, 

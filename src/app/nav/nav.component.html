@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <mat-sidenav-container class="sidenav-container" class="sidenav-container mat-app-background" [ngClass]="{'dark-theme-mode':isDarkTheme}">
   <mat-sidenav #drawer class="sidenav" fixedInViewport
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
@@ -5,9 +7,22 @@
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar >Categories</mat-toolbar>
     <mat-nav-list>
-      <a  mat-list-item [routerLink]="['/pc']"><mat-icon>desktop_windows</mat-icon>PC</a>
-      <a  mat-list-item [routerLink]="['/electroniques']"><mat-icon>tv</mat-icon>Électroniques</a>
-      <a  mat-list-item [routerLink]="['/telephones']" ><mat-icon>smartphone</mat-icon>Téléphone</a>
+      <a  mat-list-item [routerLink]="['/pc']"><div class="account two">
+        <p class="social-logo2"><i class="fa-solid fa-laptop"></i></p>
+        <p>Laptops </p>
+    </div></a>
+     
+      <a  mat-list-item [routerLink]="['/telephones']" ><div class="account two">
+        <p class="social-logo2"><i class="fa-solid fa-mobile-screen-button"></i></p>
+        <p>Phones </p>
+    </div></a>
+
+    <a  mat-list-item [routerLink]="['/electroniques']">
+      <div class="account two">
+        <p class="social-logo2"><i class="fa-solid fa-headphones"></i></p>
+        <p>Accessories</p>
+    </div>
+    </a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -20,32 +35,80 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">Categories</mat-icon>
       </button>
-      <span><mat-icon>eco</mat-icon>Let'Shop</span> 
-      <span><a  mat-button [routerLink]="['']"><mat-icon>home</mat-icon>Home</a></span>
-      <span><a  *ngIf="myservice.isAuthenticated()" mat-button [routerLink]="['/Mes achats']"><mat-icon>shopping_cart</mat-icon>Cart</a></span>
-      <span style="flex:auto;"></span>
-      <mat-slide-toggle [(ngModel)]="isDarkTheme" labelPosition="before" (change)="storeThemeSelection()">
-        <mat-icon>bedtime</mat-icon>
-      </mat-slide-toggle>
+      <span class="title"> <span>T</span>ech<span>H</span>ome </span>
+      <span><a  *ngIf="myservice.isAuthenticated()" mat-button [routerLink]="['/Mes achats']">
+        <div class="account">
+          <p class="social-logo"> <i class="fa-solid fa-cart-arrow-down"></i></p>
+          <p>Sign Up</p>
+      </div></a>
 
-      <a mat-button *ngIf="!myservice.isAuthenticated()" [routerLink]="['/register']"><mat-icon>perm_identity</mat-icon>Sign Up</a>
-      <a *ngIf="!myservice.isAuthenticated()" mat-button [routerLink]="['/login']"><mat-icon>input</mat-icon>Login</a>
-      <a mat-button *ngIf="myservice.isAuthenticated()" (click)="logout()"><mat-icon>logout</mat-icon>Logout</a>
+      </span>
+      <span style="flex:auto;"></span>
+     
+
+      <a mat-button *ngIf="!myservice.isAuthenticated()" [routerLink]="['/register']">   
+     <div class="account">
+        <p class="social-logo"><i class="fas fa-user"></i></p>
+        <p>Sign Up</p>
+    </div></a>
+      <a *ngIf="!myservice.isAuthenticated()" mat-button [routerLink]="['/login']">
+        <div class="account">
+          <p class="social-logo"><i class="fa fa-sign-in" aria-hidden="true"></i></p>
+          <p>Login</p>
+      </div>
+      </a>
+      <a mat-button *ngIf="myservice.isAuthenticated()" (click)="logout()">
+        <div class="account">
+          <p class="social-logo"><i class="fa-solid fa-right-from-bracket"></i></p>
+          <p>Logout</p>
+      </div>
+
+      </a>
    </mat-toolbar>
       <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
-<div class="footer">
- <div class="rigth"><b><FONT COLOR="#ff0000">Copyright &copy;  {{year}} , Let'Shop</FONT></b>
- </div>
+<footer>
+  <div class="footer_content">
 
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
- 
- <ul class="social-menu">
-    <li><a href="https://facebook.com/"><i class="fab fa-facebook"></i></a></li>
-    <li><a href="https://linkedin.com/"><i class="fab fa-linkedin"></i></a></li>
-    <li><a href="https://twitter.com/"><i class="fab fa-twitter"></i></a></li>
-    <li><a href="https://instagram.com/"><i class="fab fa-instagram"></i> </a></li>
-    <li><a href="https://youtube.com/"><i class="fab fa-youtube"></i> </a></li>
-  </ul>
-</div>
+      <ul class="part1">
+          <li id="footer_title">Contact</li>
+          <li >Street: 20 Mars</li> 
+          <li >City: Tunis</li> 
+          <li >State Full: Tunis</li> 
+          <li >Zip Code: 5170</li> 
+          <li >Phone Number : +216 71556872</li>
+          <li >Mobile Number : +216 29703772</li>                       
+      </ul>
+
+      <ul class="part2">
+          <li id="footer_title">Menu</li>
+          <li > <a href="#">Home</a> </li> 
+          <li > <a href="#">Books</a> </li> 
+          <li > <a href="#">About</a> </li> 
+          <li > <a href="#">Models</a> </li> 
+          <li > <a href="#">Our blog</a> </li> 
+          <li > <a href="#">Pricing</a> </li>                     
+      </ul>
+
+      <ul class="part3">
+          <li id="footer_title">Recent posts</li>
+          <li >Laptop MSI Discount</li> 
+          <li >Competition for 2 Galaxies</li>
+          <li >A world of opportunities</li> 
+                           
+      </ul>
+
+     <ul class="part4">
+         
+          <li id="footer_title">Newsteller</li>
+          <li class="footer_form"> <input type="email" placeholder="Your email address"/> <button class="btn-footer">SIGN UP</button></li>
+          <li class="footer_icons"> <a href="https://www.facebook.com/talelchebb/"> <i class="fab fa-facebook-f"></i> </a> <a href="#"> <i class="fab fa-twitter"></i></a> <a href="https://www.instagram.com/talelchebb/?hl=fr"> <i class="fab fa-instagram"></i></a> <a href="https://www.linkedin.com/in/talel-chebbi-a53496214/"> <i class="fab fa-linkedin"></i></a> <a href="#"> <i class="fab fa-youtube"></i> </a> </li>
+      
+     
+     </ul>
+  </div>
+
+
+
+</footer>

@@ -21,7 +21,7 @@ export class MyserviceService {
   getUserName() {
     return this._http.get('http://localhost:3000/users/username', {
       observe: 'body',
-      params: new HttpParams().append('token', localStorage.getItem('token'))
+      params: new HttpParams().append('token', localStorage.getItem('token')!)
     });
      } 
      isAuthenticated (): boolean {

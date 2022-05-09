@@ -6,13 +6,15 @@ import { Observable } from 'rxjs';
 import { ToastrService } from 'ngx-toastr';
 import { MyserviceService } from '../myservice.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { cards } from '../interfaces/cards';
+
 @Component({
   selector: 'app-electroniques',
   templateUrl: './electroniques.component.html',
   styleUrls: ['./electroniques.component.css']
 })
 export class ElectroniquesComponent implements OnInit{
-  cards = [];
+  cards: Array <cards> =[] ;
   cardsForHandset = [];
   cardsForWeb = [];
   add: number = -1 ;
@@ -72,7 +74,7 @@ export class ElectroniquesComponent implements OnInit{
  
   }
 
-buy(amount: number){
+buy(amount: string){
    let selectedCard = this.cards[this.add] ;
    let data = {
      ref: selectedCard.ref, 

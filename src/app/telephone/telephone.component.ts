@@ -6,6 +6,7 @@ import { ToastrService } from 'ngx-toastr';
 import { Observable } from 'rxjs';
 import { MyserviceService } from '../myservice.service';
 import { Router, ActivatedRoute} from '@angular/router';
+import { cards } from '../interfaces/cards';
 
 @Component({
   selector: 'app-telephone',
@@ -13,7 +14,7 @@ import { Router, ActivatedRoute} from '@angular/router';
   styleUrls: ['./telephone.component.css']
 })
 export class TelephoneComponent {
-  cards = [];
+  cards: Array <cards> =[] ;
   cardsForHandset = [];
   cardsForWeb = [];
   add: number = -1 ;
@@ -73,7 +74,7 @@ export class TelephoneComponent {
    
     }
   
-    buy(amount: number){
+    buy(amount: string){
        let selectedCard = this.cards[this.add] ;
        let data = {
          ref: selectedCard.ref, 

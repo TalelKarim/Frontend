@@ -11,7 +11,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class RegisterComponent implements OnInit {
 
-  myForm: FormGroup;s
+  myForm: FormGroup;
   successMessage: String = '';
   constructor(private _myservice: MyserviceService,
     private _router: Router,
@@ -24,17 +24,17 @@ export class RegisterComponent implements OnInit {
       cnfpass: new FormControl(null, this.passValidator)
     });
 
-    this.myForm.controls.password.valueChanges
+    this.myForm.controls['password'].valueChanges
       .subscribe(
-        x => this.myForm.controls.cnfpass.updateValueAndValidity()
+        x => this.myForm.controls['cnfpass'].updateValueAndValidity()
       );
   }
 
   ngOnInit() {
   }
 
-  isValid(controlName) {
-    return this.myForm.get(controlName).invalid && this.myForm.get(controlName).touched;
+  isValid(controlName :string) {
+    return this.myForm.get(controlName)!.invalid && this.myForm.get(controlName)!.touched;
   }
 
   passValidator(control: AbstractControl) {
