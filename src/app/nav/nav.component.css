@@ -84,7 +84,7 @@
   font-weight: 400;
 }
 
-a:hover{
+.cat:hover{
   border-color: #c6c6c6;
   background-color: #f0f0f0;
 }

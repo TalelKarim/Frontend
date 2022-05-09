@@ -10,6 +10,8 @@
   background-color: #fff;
 }
 
+
+
 .container{
   background-color: #fff;
   width: 99%;
@@ -113,3 +115,27 @@
   font-size: 0.75em;  
   text-decoration: line-through;
 }
+
+.cart-button {
+   position: relative;
+   padding: 10px;
+   width: 100px;
+   height: 40px;
+   border: 0;
+   border-radius: 10px;
+   background-color: #2b3044;
+   outline: none;
+   cursor: pointer;
+   margin: 0 10px;
+   color: #fff;
+   transition: 0.3s ease-in-out;
+   overflow: hidden;
+    user-select: none; 
+ }
+
+ .cart-button:hover {
+   background-color: #202431;
+ }
+ .cart-button:active {
+   transform: scale(0.9);
+ }

@@ -9,9 +9,22 @@
                 <p class="name">{{cards[0].title}}</p>
                 <p class="price">{{cards[0].prix}}DT <span class="old">2599.00DT</span></p>
                 <p class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
-  
-            </div>
-          </div>
+               
+                <button class="cart-button"   (click)="AddToCart(0)" *ngIf="add !== 0">
+                    <span class="add-to-cart">Add to cart</span>
+                    <span class="added"></span>
+                    <i class="fa fa-shopping-cart"></i>
+                  </button>
+
+                  <button class="cart-button"   (click)="buy()" *ngIf="add === 0">
+                    <span class="add-to-cart">Add</span>
+                    <span class="added"></span>
+                    <i class="fa fa-shopping-cart"></i>
+                  </button>
+            
+                </div>
+          
+        </div>  
   
         <div class="card">
             <img src="http://localhost:3000/images/pc2.png"/>
@@ -20,7 +33,19 @@
                 <p class="name">{{cards[1].title}}</p>
                 <p class="price">{{cards[1].prix}}DT<span class="old">3299.00DT</span></p>
                 <p class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
-  
+                
+                <button class="cart-button"   (click)="AddToCart(0)" *ngIf="add !== 0">
+                    <span class="add-to-cart">Add to cart</span>
+                    <span class="added"></span>
+                    <i class="fa fa-shopping-cart"></i>
+                  </button>
+
+                  <button class="cart-button"   (click)="buy()" *ngIf="add === 0">
+                    <span class="add-to-cart">Add</span>
+                    <span class="added"></span>
+                    <i class="fa fa-shopping-cart"></i>
+                  </button>
+            
             </div>
         </div>
   
@@ -31,7 +56,19 @@
                 <p class="name">{{cards[2].title}}</p>
                 <p class="price">{{cards[2].prix}}DT <span class="old">2899.00DT</span></p>
                 <p class="rating2"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
-  
+               
+                <button class="cart-button"   (click)="AddToCart(0)" *ngIf="add !== 0">
+                    <span class="add-to-cart">Add to cart</span>
+                    <span class="added"></span>
+                    <i class="fa fa-shopping-cart"></i>
+                  </button>
+
+                  <button class="cart-button"   (click)="buy()" *ngIf="add === 0">
+                    <span class="add-to-cart">Add</span>
+                    <span class="added"></span>
+                    <i class="fa fa-shopping-cart"></i>
+                  </button>
+            
             </div>
         </div>
   
@@ -42,6 +79,19 @@
                 <p class="name">{{cards[3].title}}</p>
                 <p class="price">{{cards[3].prix}}DT <span class="old">1899.00DT</span></p>
                 <p class="rating4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+
+                <button class="cart-button"   (click)="AddToCart(0)" *ngIf="add !== 0">
+                    <span class="add-to-cart">Add to cart</span>
+                    <span class="added"></span>
+                    <i class="fa fa-shopping-cart"></i>
+                  </button>
+
+                  <button class="cart-button"   (click)="buy()" *ngIf="add === 0">
+                    <span class="add-to-cart">Add</span>
+                    <span class="added"></span>
+                    <i class="fa fa-shopping-cart"></i>
+                  </button>
+            
             </div>
         </div>
   
@@ -52,6 +102,19 @@
                 <p class="name">{{cards[4].title}}</p>
                 <p class="price">{{cards[4].prix}}DT <span class="old">4899.00DT</span></p>
                 <p class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+
+                <button class="cart-button"   (click)="AddToCart(0)" *ngIf="add !== 0">
+                    <span class="add-to-cart">Add to cart</span>
+                    <span class="added"></span>
+                    <i class="fa fa-shopping-cart"></i>
+                  </button>
+
+                  <button class="cart-button"   (click)="buy()" *ngIf="add === 0">
+                    <span class="add-to-cart">Add</span>
+                    <span class="added"></span>
+                    <i class="fa fa-shopping-cart"></i>
+                  </button>
+            
   
             </div>
            
@@ -64,6 +127,19 @@
                 <p class="name">{{cards[5].title}}</p>
                 <p class="price">{{cards[5].prix}}DT <span class="old">2950.00DT</span></p>
                 <p class="rating6"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+
+                <button class="cart-button"   (click)="AddToCart(0)" *ngIf="add !== 0">
+                    <span class="add-to-cart">Add to cart</span>
+                    <span class="added"></span>
+                    <i class="fa fa-shopping-cart"></i>
+                  </button>
+
+                  <button class="cart-button"   (click)="buy()" *ngIf="add === 0">
+                    <span class="add-to-cart">Add</span>
+                    <span class="added"></span>
+                    <i class="fa fa-shopping-cart"></i>
+                  </button>
+            
             </div>
         </div>
   
@@ -74,6 +150,19 @@
                 <p class="name">{{cards[6].title}}</p>
                 <p class="price">{{cards[6].prix}}DT <span class="old">2199.00DT</span></p>
                 <p class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+
+                <button class="cart-button"   (click)="AddToCart(0)" *ngIf="add !== 0">
+                    <span class="add-to-cart">Add to cart</span>
+                    <span class="added"></span>
+                    <i class="fa fa-shopping-cart"></i>
+                  </button>
+
+                  <button class="cart-button"   (click)="buy()" *ngIf="add === 0">
+                    <span class="add-to-cart">Add</span>
+                    <span class="added"></span>
+                    <i class="fa fa-shopping-cart"></i>
+                  </button>
+            
             </div>
         </div>
   
@@ -84,6 +173,19 @@
                 <p class="name">{{cards[7].title}}</p>
                 <p class="price">{{cards[7].prix}}DT <span class="old">3299.00DT</span></p>
                 <p class="rating8"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+
+                <button class="cart-button"   (click)="AddToCart(0)" *ngIf="add !== 0">
+                    <span class="add-to-cart">Add to cart</span>
+                    <span class="added"></span>
+                    <i class="fa fa-shopping-cart"></i>
+                  </button>
+
+                  <button class="cart-button"   (click)="buy()" *ngIf="add === 0">
+                    <span class="add-to-cart">Add</span>
+                    <span class="added"></span>
+                    <i class="fa fa-shopping-cart"></i>
+                  </button>
+            
             </div>
         </div>
   
@@ -94,6 +196,19 @@
                 <p class="name">{{cards[8].title}}</p>
                 <p class="price">{{cards[8].prix}}DT <span class="old">3199.00DT</span></p>
                 <p class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+
+                <button class="cart-button"   (click)="AddToCart(0)" *ngIf="add !== 0">
+                    <span class="add-to-cart">Add to cart</span>
+                    <span class="added"></span>
+                    <i class="fa fa-shopping-cart"></i>
+                  </button>
+
+                  <button class="cart-button"   (click)="buy()" *ngIf="add === 0">
+                    <span class="add-to-cart">Add</span>
+                    <span class="added"></span>
+                    <i class="fa fa-shopping-cart"></i>
+                  </button>
+            
             </div>
         </div>
   

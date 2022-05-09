@@ -19,8 +19,9 @@ export class PCComponent{
   cardsForHandset = [];
   cardsForWeb = [];
   add: number = -1 ;
-  value:String;
+  value:number = 0;
   SelectedValue:String;
+  amount:number = 0;
 
 
   isHandset: boolean = false;
@@ -76,13 +77,13 @@ export class PCComponent{
  
   }
 
-  buy(amount: string){
+  buy(){
      let selectedCard = this.cards[this.add] ;
      let data = {
        ref: selectedCard.ref, 
        title: selectedCard.title ,
        prix: selectedCard.prix,
-       amount: +amount,
+       amount: +1,
        imageName: selectedCard.imageName,
      }
    this.appService.addToCart(data).subscribe(() => this.add = -1) ;

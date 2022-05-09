@@ -74,13 +74,13 @@ export class ElectroniquesComponent implements OnInit{
  
   }
 
-buy(amount: string){
+buy(){
    let selectedCard = this.cards[this.add] ;
    let data = {
      ref: selectedCard.ref, 
      title: selectedCard.title ,
      prix: selectedCard.prix,
-     amount: +amount,
+     amount: +1,
      imageName: selectedCard.imageName,
    }
  this.appService.addToCart(data).subscribe(() => this.add = -1) ;

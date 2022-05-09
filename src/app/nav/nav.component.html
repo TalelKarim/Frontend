@@ -7,17 +7,17 @@
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar >Categories</mat-toolbar>
     <mat-nav-list>
-      <a  mat-list-item [routerLink]="['/pc']"><div class="account two">
+      <a  class="cat"  mat-list-item [routerLink]="['/pc']"><div class="account two">
         <p class="social-logo2"><i class="fa-solid fa-laptop"></i></p>
         <p>Laptops </p>
     </div></a>
-     
-      <a  mat-list-item [routerLink]="['/telephones']" ><div class="account two">
+      
+      <a  class="cat" mat-list-item [routerLink]="['/telephones']" ><div class="account two">
         <p class="social-logo2"><i class="fa-solid fa-mobile-screen-button"></i></p>
         <p>Phones </p>
     </div></a>
 
-    <a  mat-list-item [routerLink]="['/electroniques']">
+    <a  class="cat" mat-list-item [routerLink]="['/electroniques']">
       <div class="account two">
         <p class="social-logo2"><i class="fa-solid fa-headphones"></i></p>
         <p>Accessories</p>
