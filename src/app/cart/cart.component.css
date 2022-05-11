@@ -1,3 +1,16 @@
+.container{
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+table{
+    position: relative;
+    top: -220px;
+    left: 10px;
+}
 thead{
     border-bottom: 3px solid #b5b5b5;
     position: center;
@@ -26,4 +39,7 @@ th,td {
  }
  button{
      margin-right: 10px;
+     background-color: #d95252;
+     color: #fff;
+     font-weight: 500;
  }

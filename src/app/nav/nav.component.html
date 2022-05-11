@@ -7,7 +7,7 @@
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar >Categories</mat-toolbar>
     <mat-nav-list>
-      <a  class="cat"  mat-list-item [routerLink]="['/pc']"><div class="account two">
+      <a  class="cat"  mat-list-item [routerLink]="['']"><div class="account two">
         <p class="social-logo2"><i class="fa-solid fa-laptop"></i></p>
         <p>Laptops </p>
     </div></a>
@@ -36,10 +36,10 @@
         <mat-icon aria-label="Side nav toggle icon">Categories</mat-icon>
       </button>
       <span class="title"> <span>T</span>ech<span>H</span>ome </span>
-      <span><a  *ngIf="myservice.isAuthenticated()" mat-button [routerLink]="['/Mes achats']">
+      <span *ngIf="myservice.isAuthenticated()"><a   mat-button [routerLink]="['/Mes achats']">
         <div class="account">
           <p class="social-logo"> <i class="fa-solid fa-cart-arrow-down"></i></p>
-          <p>Sign Up</p>
+          <p>Cart</p>
       </div></a>
 
       </span>

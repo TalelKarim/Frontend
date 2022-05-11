@@ -44,9 +44,8 @@ export class LoginComponent implements OnInit {
             console.log(data);
             localStorage.setItem('token', data.toString());
             this._router.navigate(['/']);
-            this.toaster.success('Bienvenu chez Let\'Shop');
           },
-          error => { this.toaster.error('veuillez vérifier vos credentials ');}
+          error => { alert('Verify Credentials ');}
         );
     }
    

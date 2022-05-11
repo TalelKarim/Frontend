@@ -69,25 +69,29 @@ export class PCComponent{
     return 'url(' + 'http://localhost:3000/images/' + imageName + '.jpg' + ')';
   }
   AddToCart(index: number) {
-    if (this.myservice.isAuthenticated()){ this.add = +index }
-    else 
-    {
-      this._router.navigate(['../login'], {relativeTo: this._activatedRoute });
-    }
+   if (this.myservice.isAuthenticated())
+  this.add = +index 
+  this._router.navigate(['../login'], {relativeTo: this._activatedRoute });
+    
  
   }
 
-  buy(){
-     let selectedCard = this.cards[this.add] ;
-     let data = {
-       ref: selectedCard.ref, 
-       title: selectedCard.title ,
-       prix: selectedCard.prix,
-       amount: +1,
-       imageName: selectedCard.imageName,
-     }
-   this.appService.addToCart(data).subscribe(() => this.add = -1) ;
-this.toaster.success('Bien ajouter au panier');
+  buy(amount: string){
+    if (Number(amount) > 0){
+      let selectedCard = this.cards[this.add] ;
+      let data = {
+        ref: selectedCard.ref, 
+        title: selectedCard.title ,
+        prix: selectedCard.prix,
+        amount: amount,
+        imageName: selectedCard.imageName,
+      }
+    this.appService.addToCart(data).subscribe(() => this.add = -1) ;
+    }
+    else{
+      alert('Invalid amount');
+    }
+     
   }
 
   sort() {

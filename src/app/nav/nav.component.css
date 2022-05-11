@@ -169,6 +169,7 @@ margin-left: 650px ;
 }
 
 .footer_content{
+  width: 93.3%;
   padding: 45px 60px;
   background-color: #1E1F29;
   color: #fff;
@@ -230,6 +231,5 @@ margin-left: 650px ;
 }
 
 .footer_form{
-  transform: translateù
-   (10px);
+  transform: translate(10px);
 }

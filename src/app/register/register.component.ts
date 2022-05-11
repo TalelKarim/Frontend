@@ -61,8 +61,8 @@ export class RegisterComponent implements OnInit {
     if (this.myForm.valid) {
       this._myservice.submitRegister(this.myForm.value)
         .subscribe(
-          data => {this.toaster.success('Successfully Registred')},
-          error => {this.toaster.error('Error Occuring')},
+          data => {alert('Successfully Registred')},
+          error => {alert('Error Occuring')},
         );
     }
   }
