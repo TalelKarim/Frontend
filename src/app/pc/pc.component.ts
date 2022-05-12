@@ -65,17 +65,14 @@ export class PCComponent{
     this.cards = this.isHandset ? this.cardsForHandset : this.cardsForWeb;
   }
 
-  getImage(imageName: string): string {
-    return 'url(' + 'http://localhost:3000/images/' + imageName + '.jpg' + ')';
-  }
-  AddToCart(index: number) {
-   if (this.myservice.isAuthenticated())
-  this.add = +index 
-  this._router.navigate(['../login'], {relativeTo: this._activatedRoute });
-    
- 
-  }
 
+  AddToCart(index: number) {
+    if (this.myservice.isAuthenticated()){ this.add = +index }
+    else 
+    {
+      this._router.navigate(['../login'], {relativeTo: this._activatedRoute });
+    }
+  }  
   buy(amount: string){
     if (Number(amount) > 0){
       let selectedCard = this.cards[this.add] ;

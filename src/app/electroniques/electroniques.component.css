@@ -12,7 +12,7 @@
 
 .container{
   background-color: #fff;
-  width: 99%;
+  width: 100%;
   transform: translate(-120px);
   display: flex;
   flex-direction: row;
@@ -20,6 +20,7 @@
   justify-content: flex-start;
   align-items: center; 
   padding: 30px 50px;
+  
 
 
 
@@ -33,7 +34,7 @@
 }
 
 .card:hover{
-   transform: scale(1.1);
+   transform: scale(1.06);
 }
 .card .info{
     text-align: center;
@@ -143,4 +144,8 @@
  input{
    border-radius: 10px;
    padding-left: 7px;
+}
+
+.eight , .nine{
+   transform: translate(-9px);
 }
